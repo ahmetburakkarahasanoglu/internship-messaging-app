@@ -1,0 +1,38 @@
+@ChatApi_HostAddress = http://localhost:5000
+
+GET {{ChatApi_HostAddress}}/api/conversations
+Accept: application/json
+
+###
+
+POST {{ChatApi_HostAddress}}/api/conversations
+Content-Type: application/json
+
+{
+  "title": "Staj sohbeti"
+}
+
+###
+
+GET {{ChatApi_HostAddress}}/api/conversations/1
+Accept: application/json
+
+###
+
+GET {{ChatApi_HostAddress}}/api/conversations/1/messages
+Accept: application/json
+
+###
+
+GET {{ChatApi_HostAddress}}/api/conversations/1/messages?after=0
+Accept: application/json
+
+###
+
+POST {{ChatApi_HostAddress}}/api/conversations/1/messages
+Content-Type: application/json
+
+{
+  "sender": "Ali",
+  "content": "Merhaba!"
+}
